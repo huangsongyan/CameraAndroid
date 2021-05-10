@@ -19,7 +19,6 @@ import javax.microedition.khronos.opengles.GL10;
  * Created by aserbao on 2018/5/15.
  */
 
-
 public class CameraView extends GLSurfaceView implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener{
 
     public CameraDrawer mCameraDrawer;

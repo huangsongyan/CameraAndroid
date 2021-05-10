@@ -1,8 +1,8 @@
 package com.aserbao.androidcustomcamera.whole.record.other;
 
 
-import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.MagicAntiqueFilter;
 import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.GPUImageFilter;
+import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.MagicAntiqueFilter;
 import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.MagicBrannanFilter;
 import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.MagicCoolFilter;
 import com.aserbao.androidcustomcamera.whole.record.filters.gpuFilters.baseFilter.MagicFreudFilter;

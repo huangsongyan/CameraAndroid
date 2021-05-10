@@ -7,7 +7,6 @@ import android.opengl.GLES20;
  * Created by aserbao on 2018/5/15.
  */
 
-
 public class EasyGlUtils {
 
     public static void useTexParameter(){

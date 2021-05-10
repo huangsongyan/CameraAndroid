@@ -41,19 +41,16 @@ import butterknife.OnClick;
 import static com.aserbao.androidcustomcamera.base.utils.StaticFinalValues.COMR_FROM_SEL_COVER_TIME_ACTIVITY;
 import static com.aserbao.androidcustomcamera.base.utils.StaticFinalValues.COMR_FROM_VIDEO_EDIT_TIME_ACTIVITY;
 
-
-public class VideoPlayerActivity2 extends AppCompatActivity  {
+public class VideoPlayerActivity2 extends AppCompatActivity {
     private static final String TAG = VideoPlayerActivity2.class.getSimpleName();
     @BindView(R.id.public_video_jz_video)
     PublicVideoJZVideo mPublicVideoJZVideo;
-
-
 
     @BindView(R.id.pop_video_loading_fl)
     FrameLayout mPopVideoLoadingFl;
 
     private RelativeLayout rlVideo;
-    private String  videoFilePath = "/storage/emulated/0/ych/123.mp4", mOnLineVideoFilePath;
+    private String videoFilePath = "/storage/emulated/0/ych/123.mp4", mOnLineVideoFilePath;
     private Context mContext;
 
     public static void launch(Activity activity, String outputPath) {
@@ -80,8 +77,6 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
     private void initData() {
         videoFilePath = getIntent().getStringExtra(StaticFinalValues.VIDEOFILEPATH);
     }
-
-
 
     private void playVideo() {
         mPublicVideoJZVideo.setUp(videoFilePath, JZVideoPlayer.SCREEN_LAYOUT_NORMAL, "");
@@ -165,26 +160,24 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
     }
 
 
-
-
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (mPopVideoLoadingFl!= null && mPopVideoLoadingFl.getVisibility() == View.VISIBLE) {
+        if (mPopVideoLoadingFl != null && mPopVideoLoadingFl.getVisibility() == View.VISIBLE) {
             return true;
         } else {
             return super.dispatchTouchEvent(ev);
         }
     }
 
-    @OnClick({R.id.video_player2_edit_video_tv,  R.id.video_player2_sel_cover, R.id.back_iv,  R.id.video_player_tv_storage, R.id.video_player_tv_public})
+    @OnClick({R.id.video_player2_edit_video_tv, R.id.video_player2_sel_cover, R.id.back_iv, R.id.video_player_tv_storage, R.id.video_player_tv_public})
     public void onViewClicked(View view) {
 
         switch (view.getId()) {
 
             case R.id.video_player2_edit_video_tv:
                 Intent intent = new Intent(MyApplication.getContext(), VideoEditActivity.class);
-                intent.putExtra(StaticFinalValues.VIDEOFILEPATH,videoFilePath);
-                startActivityForResult(intent,COMR_FROM_VIDEO_EDIT_TIME_ACTIVITY);
+                intent.putExtra(StaticFinalValues.VIDEOFILEPATH, videoFilePath);
+                startActivityForResult(intent, COMR_FROM_VIDEO_EDIT_TIME_ACTIVITY);
                 break;
             case R.id.video_player2_sel_cover:
                 Intent intent2 = new Intent(VideoPlayerActivity2.this, SelCoverTimeActivity.class);
@@ -209,7 +202,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-        if (mPopVideoLoadingFl!= null && mPopVideoLoadingFl.getVisibility() != View.VISIBLE) {
+        if (mPopVideoLoadingFl != null && mPopVideoLoadingFl.getVisibility() != View.VISIBLE) {
             super.onBackPressed();
         }
     }
@@ -221,7 +214,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         if (data == null) {
             return;
         }
-        switch (requestCode){
+        switch (requestCode) {
             case StaticFinalValues.COMR_FROM_VIDEO_EDIT_TIME_ACTIVITY:
                 videoFilePath = data.getStringExtra(StaticFinalValues.VIDEOFILEPATH);
                 playVideo();
@@ -241,7 +234,7 @@ public class VideoPlayerActivity2 extends AppCompatActivity  {
         String filename = task.getFilename();*/
         ContentValues localContentValues = getVideoContentValues(this, new File(path), System.currentTimeMillis());
         Uri localUri = localContentResolver.insert(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, localContentValues);
-        Toast.makeText(mContext, "保存到相册成功，路径为"+ path, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, "保存到相册成功，路径为" + path, Toast.LENGTH_SHORT).show();
     }
 
 

@@ -15,7 +15,6 @@ import com.aserbao.androidcustomcamera.whole.record.utils.EasyGlUtils;
  * Created by aserbao on 2018/5/15.
  */
 
-
 public class SlideGpuFilterGroup {
     private MagicFilterType[] types = new MagicFilterType[]{
             MagicFilterType.NONE,

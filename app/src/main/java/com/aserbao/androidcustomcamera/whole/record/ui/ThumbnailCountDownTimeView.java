@@ -20,7 +20,6 @@ import com.aserbao.androidcustomcamera.R;
  * Created by aserbao on 2018/5/15.
  */
 
-
 public class ThumbnailCountDownTimeView  extends View {
     private int mWidth;
     private int mHeight;

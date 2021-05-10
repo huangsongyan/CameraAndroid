@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckedTextView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aserbao.androidcustomcamera.R;
-import com.aserbao.androidcustomcamera.WelcomeActivity;
 import com.aserbao.androidcustomcamera.base.MyApplication;
 import com.aserbao.androidcustomcamera.base.activity.BaseActivity;
 import com.aserbao.androidcustomcamera.base.pop.PopupManager;
@@ -36,8 +34,6 @@ import com.aserbao.androidcustomcamera.whole.record.ui.FocusImageView;
 import com.aserbao.androidcustomcamera.whole.record.ui.ProgressView;
 import com.aserbao.androidcustomcamera.whole.record.ui.SlideGpuFilterGroup;
 import com.aserbao.androidcustomcamera.whole.videoPlayer.VideoPlayerActivity2;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

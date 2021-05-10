@@ -12,7 +12,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.aserbao.androidcustomcamera.R;
 import com.aserbao.androidcustomcamera.base.utils.StaticFinalValues;
 
 import java.lang.ref.WeakReference;
